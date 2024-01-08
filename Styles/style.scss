@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@import 'general';
+@import 'home';
+@import 'variables';
+@import 'category-recipes';
+@import 'profile';
+@import 'recipe-main';
+@import 'login';
+@import 'recipes';
+@import 'categories';
+@import 'welcome';
+
+.test-body {
+  flex-direction: column;
+}
+
+#lol {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  width: fit-content;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+
+  span {
+    font-weight: 700;
+    text-align: right;
+  }
+}
+
+#hays {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rem 0 2rem;
+
+  span {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}

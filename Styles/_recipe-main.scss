@@ -1,0 +1,982 @@
+@import 'variables';
+
+.recipe-main-body-wrapper {
+  padding: 0;
+}
+
+.recipe-main-img-wrapper {
+  height: 28rem;
+  border-radius: 15px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50%;
+  }
+}
+
+.recipe-main-content-wrapper {
+  background-color: $yellow_lightest;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 -5px 40px rgba($color: #000000, $alpha: 0.7);
+  transform: translateY(-3rem);
+  margin-bottom: -3rem;
+
+  .recipe-tags {
+    margin-top: 1rem;
+  }
+}
+
+.recipe-main-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-start;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+.recipe-main-header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.recipe-main-rating {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: $transition;
+  cursor: pointer;
+
+  p {
+    font-weight: 600;
+  }
+
+  svg {
+    height: 14px;
+    fill: $yellow_main;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px rgba($color: $yellow_main, $alpha: 0.3);
+  }
+}
+
+.recipe-main-favorites-form {
+  width: fit-content;
+  cursor: pointer;
+  height: fit-content;
+  border-radius: 5rem;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba($color: $yellow_main, $alpha: 0.3);
+  }
+}
+
+.recipe-main-favorites {
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  background-color: white;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    height: 14px;
+    fill: $navy_blue;
+  }
+}
+
+.recipe-main-cook-time {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.recipe-main-cook-time-column {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
+
+  h5 {
+    font-weight: 700;
+    font-size: 17px;
+  }
+}
+
+.with-right-border {
+  border-right: 1px solid $navy_blue;
+}
+
+.recipe-main-details {
+  background-color: white;
+  margin-top: 5rem;
+  width: 75%;
+  padding: 2rem 3.5rem;
+  border-radius: 15px;
+  position: relative;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba($color: $yellow_main, $alpha: 0.3);
+  }
+
+  h2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 23px;
+    transform: translate(2rem, -50%);
+    border: 1px dashed $navy_blue;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    line-height: 1em;
+  }
+}
+
+.recipe-main-ingredients {
+  padding-top: 3rem;
+
+  p {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    width: fit-content;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+
+    span {
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+}
+
+.recipe-main-procedures {
+  padding-top: 1rem;
+
+  p {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-weight: 700;
+      font-size: 23px;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.recipe-main-about {
+  padding-top: 3rem;
+}
+
+.recipe-main-about-img-wrapper {
+  width: 75%;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  margin-top: 1rem;
+  transition: $transition;
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px rgba($color: $yellow_main, $alpha: 0.5);
+  }
+}
+
+.recipe-main-comments {
+  height: 85%;
+  padding-top: 2.5rem;
+}
+
+.recipe-main-comments-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: scroll;
+  height: 82%;
+  position: relative;
+  padding-bottom: 6rem;
+
+  span {
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba($color: white, $alpha: 1), rgba($color: white, $alpha: 0));
+    bottom: 13%;
+    height: 5rem;
+    pointer-events: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.recipe-main-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  border: 1px solid $dark_gray;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.recipe-main-comment-header {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.recipe-main-commnent-img-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.recipe-main-comment-user-info {
+  width: 100%;
+
+  h5 {
+    font-weight: 700;
+    color: $yellow_main;
+    margin-top: 0.3rem;
+  }
+}
+
+.recipe-main-comment-user-name {
+  display: flex;
+  justify-content: space-between;
+
+  h6 {
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 500;
+    color: $dark_gray;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.recipe-main-comment-from-current-user {
+  background-color: $yellow_lightest;
+  
+  .recipe-main-comment-header {
+    flex-flow: row-reverse;
+  }
+
+  .recipe-main-comment-user-name {
+    flex-flow: row-reverse;
+  }
+
+  .recipe-main-comment-user-info {
+    h5 {
+      text-align: right;
+    }
+  }
+
+  .recipe-main-comment-content {
+    p {
+      text-align: right;
+    }
+  }
+}
+
+.recipe-main-sidebar {
+  display: flex;
+  max-height: 100%;
+  height: 100vh;
+}
+
+.recipe-main-sidebar-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  max-height: 100%;
+
+  .sidebar-user {
+    height: 8%;
+    align-items: flex-start;
+    margin-bottom: 0;
+    align-items: center;
+  }
+}
+
+.recipe-main-add-a-comment {
+  height: 2rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  label {
+    border: 1px dashed $yellow_main;
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.5rem;
+
+    p {
+      color: $yellow_main;
+      font-weight: 700;
+    }
+
+    img {
+      height: 1.5em;
+    }
+  }
+}
+
+.recipe-main-back-button {
+  position: absolute;
+  top: 0;
+  transform: translateY(-80%);
+  background-color: $yellow_lightest;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  left: 2.5rem;
+  transition: $transition;
+
+  svg {
+    height: 1em;
+    transform: rotate(180deg);
+    margin-left: -0.8rem;
+  }
+
+  &:hover {
+    transform: translate(-0.5rem, -80%) ;
+  }
+}
+
+.recipe-main-rate-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+  padding: 1rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: $transition;
+
+  
+
+  hr {
+    border: 0;
+    border-bottom: 1px solid $dark_gray;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  h6 {
+    color: $dark_gray;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.recipe-rating-rate-button {
+  position: relative;
+
+  button {
+    padding: 0.5rem 2rem;
+    color: $yellow_dark;
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 2rem;
+    border: 1px solid $yellow_main;
+    background-color: transparent;
+    cursor: pointer;
+    transition: $transition;
+    position: relative;
+
+    &:hover {
+      background-color: $yellow_main;
+      color: white;
+    }
+  }
+
+  span {
+    height: 100%;
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+  }
+}
+
+.recipe-main-rate-form-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 7rem;
+    aspect-ratio:  1/1;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.recipe-main-rate-form-header-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+  h5 {
+    font-weight: 700;
+    font-size: 23px;
+    padding-right: 1rem;
+  }
+}
+
+.recipe-main-rate-form-stars {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0rem;
+  align-items: center;
+  width: 50%;
+
+  label {
+    width: 20%;
+    cursor: pointer;
+    position: relative;
+    height: 2rem;
+  }
+
+  svg {
+    fill: $yellow_main;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: $transition;
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+  }
+}
+
+#recipe-rating-0:checked ~ .recipe-rating-rate-button > button {
+  cursor: default;
+  background-color: $gray;
+  border: 1px solid $gray;
+  color: $dark_gray;
+
+  & ~ span {
+    pointer-events: all;
+  }
+}
+
+#recipe-rating-1:checked ~ .recipe-main-rate-form-stars > label:nth-child(1) {
+  & > svg:nth-child(1) {
+    opacity: 0;
+  }
+
+  & > svg:nth-child(2) {
+    opacity: 1;
+  }
+}
+
+#recipe-rating-2:checked ~ .recipe-main-rate-form-stars {
+  & > label:nth-child(1) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+  
+  & > label:nth-child(2) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+}
+
+#recipe-rating-3:checked ~ .recipe-main-rate-form-stars {
+  & > label:nth-child(1) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+  
+  & > label:nth-child(2) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+
+  & > label:nth-child(3) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+}
+
+#recipe-rating-4:checked ~ .recipe-main-rate-form-stars {
+  & > label:nth-child(1) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+  
+  & > label:nth-child(2) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+
+  & > label:nth-child(3) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+
+  & > label:nth-child(4) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+}
+
+#recipe-rating-5:checked ~ .recipe-main-rate-form-stars {
+  & > label:nth-child(1) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+  
+  & > label:nth-child(2) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+
+  & > label:nth-child(3) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+
+  & > label:nth-child(4) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+
+  & > label:nth-child(5) {
+    & > svg:nth-child(1) {
+      opacity: 0;
+    }
+  
+    & > svg:nth-child(2) {
+      opacity: 1;
+    }
+  }
+}
+
+.recipe-rating-form-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 23px;
+  fill: $dark_gray;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: rotate(-90deg);
+  }
+}
+
+#recipe-rating-form-open:checked ~ .recipe-main-rate-form {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+.recipe-rating-form-open-span {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+  transition: $transition;
+  opacity: 0;
+}
+
+#recipe-rating-form-open:checked ~ label > .recipe-rating-form-open-span {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.recipe-main-comment-like-wrapper {
+  display: flex;
+  align-items: center;
+
+  button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: $transition;
+
+    &:nth-child(2) {
+      opacity: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+
+  svg {
+    height: 1.5em;
+    aspect-ratio: 1/1;
+    fill: $dark_gray;
+    transition: $transition;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &:hover {
+      fill: $green;
+    }    
+  }
+
+  p {
+    margin: 0 0.5rem;
+    color: $dark_gray;
+  }
+}
+
+.comment-like-wrapper {
+  position: relative;
+  width: 1.5em;
+  cursor: pointer;
+}
+
+.comment-like-button {
+  &:hover > button:nth-child(2) > svg {
+    fill: $green;
+  }
+}
+
+.comment-dislike-button {
+  margin-left: 1rem;
+
+  svg {
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-0.2rem);
+
+    &:hover {
+      fill: $red;
+    }
+  }
+}
+
+.comment-like-wrapper-active {
+  & button:nth-child(1) {
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  & button:nth-child(2) {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+    fill: $dark_gray;
+  }
+  
+  &:hover > button:nth-child(2) > svg {
+    fill: $green;
+  }
+}
+
+.comment-dislike-wrapper-active {
+  & button:nth-child(1) {
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  & button:nth-child(2) {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+    fill: $dark_gray;
+  }
+  
+  &:hover > button:nth-child(2) > svg {
+    fill: $red;
+  }
+}
+
+#recipe-comment-form-open:checked ~ .recipe-main-comment-form {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(0);
+}
+
+#recipe-comment-form-open:checked ~ label > .recipe-rating-form-open-span {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.recipe-main-comment-form {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+  padding: 1rem 3.5rem 1rem 1.5rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: $transition;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10rem);
+
+  .recipe-rating-rate-button button {
+    margin-top: 1rem !important;
+  }
+  
+
+  input {
+    border-radius: 5px;
+    border: 1px solid $dark_gray;
+    padding: 1rem;
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    &::placeholder {
+      transition: $transition;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+
+  textarea {
+    border: 1px solid $dark_gray;
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      transition: $transition;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.recipe-nav-wrapper {
+  position: fixed;
+  right: 22%;
+  z-index: 3;
+  width: 58%;
+  display: flex;
+  justify-content: right;
+  pointer-events: none;
+}
+
+.recipe-nav-main {
+  width: calc(25% - 1rem);
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  margin: 1rem;
+  transition: $transition;
+  pointer-events: all;
+  justify-content: space-evenly;
+
+  a {
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    svg {
+      fill: $dark_gray;
+      width: 100%;
+      transition: $transition;
+      max-width: 2.5rem;
+    }
+
+    &:hover > svg {
+      fill: $yellow_main;
+    }
+
+    p {
+      position: absolute;
+      padding: 0.5rem;
+      background-color: white;
+      border-radius: 5px;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%) translateY(1.5rem);
+      transition: $transition;
+      opacity: 0;
+      box-shadow: 0 0 15px rgba($color: $yellow_main, $alpha: 0.3);
+      pointer-events: none;
+    }
+
+    &:hover > p {
+      transition-delay: 0.6s;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px rgba($color: $yellow_main, $alpha: 0.3);
+  }
+}
+
+.comment-delete-form {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  transform: translateY(0.3rem);
+
+  button {
+    opacity: 1 !important;
+    pointer-events: all;
+
+    &:hover > svg {
+      fill: $red;
+      cursor: pointer;
+    }
+  }
+
+  svg {
+    opacity: 1 !important;
+    pointer-events: all;
+    height: 1.4em;
+    fill: $dark_gray;
+    transition: $transition;
+  }
+}

@@ -1,0 +1,396 @@
+@import 'variables';
+
+.recipes-body-wrapper {
+  padding-bottom: 0rem;
+
+  & > section:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+// FRENCH CAROUSEL
+
+#French-recommended-radio-1:checked ~ .home-recommended-wrapper-all > #French-recommended-1 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#French-recommended-radio-2:checked ~ .home-recommended-wrapper-all > #French-recommended-2 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#French-recommended-radio-3:checked ~ .home-recommended-wrapper-all > #French-recommended-3 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#French-recommended-radio-4:checked ~ .home-recommended-wrapper-all > #French-recommended-4 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#French-recommended-radio-1:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#French-recommended-radio-2:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-2 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#French-recommended-radio-3:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-3 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#French-recommended-radio-4:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-4 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+// ITALIAN CAROUSEL
+
+#Italian-recommended-radio-1:checked ~ .home-recommended-wrapper-all > #Italian-recommended-1 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Italian-recommended-radio-2:checked ~ .home-recommended-wrapper-all > #Italian-recommended-2 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Italian-recommended-radio-3:checked ~ .home-recommended-wrapper-all > #Italian-recommended-3 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Italian-recommended-radio-4:checked ~ .home-recommended-wrapper-all > #Italian-recommended-4 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Italian-recommended-radio-1:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Italian-recommended-radio-2:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-2 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Italian-recommended-radio-3:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-3 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Italian-recommended-radio-4:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-4 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+// JAPANESE CAROUSEL
+
+#Japanese-recommended-radio-1:checked ~ .home-recommended-wrapper-all > #Japanese-recommended-1 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Japanese-recommended-radio-2:checked ~ .home-recommended-wrapper-all > #Japanese-recommended-2 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Japanese-recommended-radio-3:checked ~ .home-recommended-wrapper-all > #Japanese-recommended-3 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Japanese-recommended-radio-4:checked ~ .home-recommended-wrapper-all > #Japanese-recommended-4 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Japanese-recommended-radio-1:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Japanese-recommended-radio-2:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-2 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Japanese-recommended-radio-3:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-3 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Japanese-recommended-radio-4:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-4 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+// KOREAN CAROUSEL
+
+#Korean-recommended-radio-1:checked ~ .home-recommended-wrapper-all > #Korean-recommended-1 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Korean-recommended-radio-2:checked ~ .home-recommended-wrapper-all > #Korean-recommended-2 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Korean-recommended-radio-3:checked ~ .home-recommended-wrapper-all > #Korean-recommended-3 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Korean-recommended-radio-4:checked ~ .home-recommended-wrapper-all > #Korean-recommended-4 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Korean-recommended-radio-1:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Korean-recommended-radio-2:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-2 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Korean-recommended-radio-3:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-3 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Korean-recommended-radio-4:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-4 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+// SPANISH CAROUSEL
+
+#Spanish-recommended-radio-1:checked ~ .home-recommended-wrapper-all > #Spanish-recommended-1 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Spanish-recommended-radio-2:checked ~ .home-recommended-wrapper-all > #Spanish-recommended-2 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Spanish-recommended-radio-3:checked ~ .home-recommended-wrapper-all > #Spanish-recommended-3 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Spanish-recommended-radio-4:checked ~ .home-recommended-wrapper-all > #Spanish-recommended-4 {
+  opacity: 1;
+  pointer-events: all; 
+
+  & > .home-recommended-recipe {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#Spanish-recommended-radio-1:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Spanish-recommended-radio-2:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-2 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Spanish-recommended-radio-3:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-3 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+#Spanish-recommended-radio-4:checked ~ .home-recommended-wrapper-all  {
+  & > .carousel-label-4 {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.recipes-recipe-placeholder {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.recipes-country-section {
+  margin-bottom: 3.5rem;
+}
+
+.recipe-country-name {
+  transform: translateY(1rem);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  a {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+    p {
+      color: $yellow_dark;
+    }
+
+    svg {
+      transition: $transition;
+      fill: $yellow_dark;
+    }
+
+    &:hover > svg {
+      transform: translateX(0.5rem);
+    }
+  }
+}

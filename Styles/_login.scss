@@ -1,0 +1,391 @@
+@import 'variables';
+
+.login-body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  max-width: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font: 100;
+  }
+} 
+
+.login-form {
+  position: absolute;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  justify-content: space-between;
+  box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.6);
+  opacity: 0;
+  transition: $transition;
+  max-height: 600px;
+
+  & > a {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%) translateY(0.5rem);
+    transition: $transition;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      height: 1em;
+      transform: rotate(180deg);
+      margin-left: -0.6rem;
+    }
+
+    &:hover {
+      transform: translateY(-100%) translateY(0.5rem) translateX(-0.5rem);
+    }
+  }
+}
+
+.login-form-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & > p {
+    font-weight: 600;
+    margin-top: 3rem;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }  
+}
+
+.login-input-wrapper {
+  width: 100%;
+  position: relative;
+  margin: 0.5rem 0;
+
+  input {
+    padding: 1rem 1rem;
+    width: 25rem;
+    border-radius: 5px;
+    border: 1px solid $dark_gray;
+    transition: $transition;
+    font-weight: 600;
+
+    &:focus {
+      border: 1px solid $yellow_main;
+    }
+
+    &:focus ~ label {
+      top: 0;
+      color: $yellow_main;
+    }
+
+    &:valid ~ label {
+      top: 0;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+    color: $dark_gray;
+    font-weight: 600;
+    background-color: white;
+    padding: 0 0.5rem;
+  }
+}
+
+.login-yellow-label {
+  font-weight: 600;
+  color: $yellow_dark;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.forgot-password {
+  width: fit-content;
+  align-self: flex-end !important;
+  padding: 1rem 0;
+}
+
+.login-button {
+  padding: 1rem 4rem;
+  width: fit-content;
+  background-color: $yellow_main;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: $transition;
+
+  &:hover {
+    background-color: $navy_blue;
+  }
+}
+
+.login-form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  a {
+    color: $dark_gray;
+  }
+}
+
+.login-form-footer-row {
+  display: flex; 
+  gap: 0.5rem;
+}
+
+.login-form-footer-row:nth-child(2) {
+  p {
+    color: $dark_gray;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+#login-form {
+  transform: translate(-10rem, -50%);
+}
+
+#signup-form {
+  left: 7%;
+  transform: translate(10rem, -50%);
+  right: auto;
+}
+
+#login-trigger:checked ~ #login-form {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+#signup-trigger:checked ~ #signup-form {
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+.signup-input-container {
+  position: relative;
+}
+
+.signup-input-wrapper {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(2rem);
+  transition: $transition;
+}
+
+#signup-input-container-2 > .signup-input-wrapper {
+  transition-delay: 0.1s;
+}
+
+#signup-input-container-3 > .signup-input-wrapper {
+  transition-delay: 0.2s;
+}
+
+.signup-input-spaceholder {
+  position: static;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.signup-next-button {
+  border: 1px solid $yellow_main;
+  color: $yellow_dark;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%) translateY(1rem) translateX(2rem);
+  cursor: pointer;
+  transition: $transition;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: $yellow_main;
+    color: white;
+  }
+
+  &:hover > svg {
+    fill: white;
+  }
+
+
+  svg {
+    fill: $yellow_main;
+    height: 1em;
+    margin-right: -0.8rem;
+    transition: $transition;
+    margin-bottom: -0.2rem;
+  }
+}
+
+.signup-back-button {
+  left: 0;
+  transform: translateY(100%) translateY(1rem) translateX(-2rem);
+
+  svg {
+    transform: rotate(180deg);
+    margin-left: -0.8rem;
+    margin-right: 0;
+  }
+}
+
+.signup-button {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(2rem) translateY(100%) translateY(1rem);
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#signup-1-trigger:checked ~ .signup-input-container > .signup-input-wrapper-1 {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+
+}
+
+#signup-2-trigger:checked ~ .signup-input-container > .signup-input-wrapper-2 {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+#signup-3-trigger:checked ~ .signup-input-container > .signup-input-wrapper-3 {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+}
+
+#signup-1-trigger:checked ~ .signup-input-container > #signup-2-trigger-button {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(100%) translateY(1rem);
+}
+
+#signup-2-trigger:checked ~ .signup-input-container > #signup-1-trigger-button {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(100%) translateY(1rem);
+}
+
+#signup-2-trigger:checked ~ .signup-input-container > #signup-3-trigger-button {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(100%) translateY(1rem);
+}
+
+#signup-3-trigger:checked ~ .signup-input-container > #signup-2-trigger-button-back {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(100%) translateY(1rem);
+}
+
+#signup-3-trigger:checked ~ .signup-input-container > .signup-button {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(100%) translateY(1rem);
+}
+
+.login-success-notice {
+  width: 25rem;
+  margin-top: 11rem;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    padding: 1rem 2rem;
+    color: $yellow_dark;
+    border: 1px solid $yellow_dark;
+    font-weight: 600;
+    width: fit-content;
+    border-radius: 10px;
+    transition: $transition;
+
+    &:hover {
+      background-color: $yellow_main;
+    border: 1px solid $yellow_main;
+    color: white;
+    }
+  }
+}
+
+.login-error-notice {
+  position: absolute;
+  z-index: 3;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+
+  p {
+    font-weight: 700;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid $red;
+    color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover ~ .login-error-notice-info {
+      opacity: 1;
+      transform: translate(-50%, -100%);
+    }
+  }
+}
+
+.login-error-notice-info {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: white;
+  box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 15rem;
+  text-align: center;
+  top: -0.5rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  transition: $transition;
+}

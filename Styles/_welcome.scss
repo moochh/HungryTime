@@ -1,0 +1,120 @@
+@import 'variables';
+
+.intro-body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.intro-content-wrapper {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+  width: 80%;
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: $yellow_dark;
+    text-align: center;
+    margin-top: 1.5rem;
+
+    span {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  p {
+    width: 30rem;
+    text-align: center;
+  }
+
+  label {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(0, 50%);
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  a {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid $navy_blue;
+    font-weight: 700;
+    transition: $transition;
+
+    &:hover {
+      background-color: $navy_blue;
+      color: white;
+    }
+  }
+}
+
+.intro-content-img-wrapper {
+  height: 20rem;
+
+  img {
+    height: 100%;
+  }
+}
+
+.intro-progress-indicator {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  span {
+    height: 10px;
+    width: 10px;
+    border: 1px solid $navy_blue;
+    border-radius: 50%;
+  }
+}
+
+.welcome-radio-input:checked + .intro-content-wrapper {
+  display: flex;
+}
+
+.intro-progress-indicator-active {
+  background-color: $navy_blue;
+}
+
+@keyframes welcome-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.intro-content-wrapper * {
+  animation-name: welcome-animation;
+  }
+
+  @for $i from 1 through 10 {
+    .intro-content-wrapper *:nth-child(#{$i}n) {
+        animation-duration: #{$i * 0.5}s;
+    }
+  }
